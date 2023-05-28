@@ -1,0 +1,64 @@
+ =>criar arquivo
+    mkdir [nomeArquivo]
+
+=> criar projetorder
+    npm init -y
+
+=> criar arquivo server.js
+=> para executar o servidor 
+    node server.js
+
+=> instalar o nodemon para facilitar para carregar o projeto quando alteramos alguma coisa
+    npm install nodemon@2.0.15 -D
+
+=> incluir codigo no dentro do scritp no arquivo package.json
+    "dev": "nodemon server.js",
+
+=> agora para executar o projeto digitar:
+    npm run dev
+
+=> criar o arquivo .gitignore e informar a pasta node_modules
+    node_modules
+
+=> instalar express
+    npm install express@4.17.3
+
+=> criar pasta src e dentro dela um arquivo app.js
+
+=> modificando o server.js
+
+=> incluir "type": "module" no package.json
+
+****mongodb
+usuario banco
+    edevaldocruz
+senha
+    lnzMVknoEqiV1kEQ
+
+
+=> instalar mongoose para comunicar com o banco
+    npm install mongoose@6.2.6
+
+=> criar uma pasta no src chamada config e dentro dela criar um arquivo chamando dbConnect.js
+
+    => pegar a string de conexão no site do atlas
+        instalar como recomenda o site 
+            npm install mongodb
+
+            string de conexao copiada do site:
+            mongodb+srv://edevaldocruz:<password>@banco1.h5bxdig.mongodb.net/?retryWrites=true&w=majority
+
+            1- colocar a senha no lugar do <password>
+            2- remover o retryWrites=true&w=majority
+            3- Incluir o node do bando de dados
+
+            ex string conexão:
+            mongodb+srv://edevaldocruz:lnzMVknoEqiV1kEQ@banco1.h5bxdig.mongodb.net/alura-node
+
+=> criar uma pasta dentro do scr chamada models e dentro dela criar uma arquivo nesse caso Livro.
+    => o arquivo deve estar com a primeira letra maiuscula e no singula.
+
+
+=> Criar uma pasta dentro do src chamada controller com um arquivo livrosController.js
+
+=> Criar uma pasta dentro do src chamada routes com um arquivo livrosRoutes.js e outro index.js
