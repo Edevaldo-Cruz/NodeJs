@@ -62,3 +62,11 @@ senha
 => Criar uma pasta dentro do src chamada controller com um arquivo livrosController.js
 
 => Criar uma pasta dentro do src chamada routes com um arquivo livrosRoutes.js e outro index.js
+
+=> criando uma nova entidade
+    1- criar um novo model chamando Autor.js
+    2- criar uma nova controller chamado AutoresController.js
+    3- criar uma nova rota chamada autoresRoutes.js
+    4- incluir rot na index do routes
+
+=> alterando model livro para receber informação do autor.

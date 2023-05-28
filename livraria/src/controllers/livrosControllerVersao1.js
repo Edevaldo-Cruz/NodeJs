@@ -1,8 +1,8 @@
-import livros from "../models/Livros.js";
+import livro from "../models/Livro.js";
 
-class LivroController {
+class LivrosController {
   static listarLivros = (req, res) => {
-    livros.find((err, livros) => {
+    livro.find((err, livros) => {
       res.status(200).json(livros);
     });
   };
@@ -10,7 +10,7 @@ class LivroController {
   static listarLivroPorId = (req, res) => {
     const id = req.params.id;
 
-    livros.findById(id, (err, livros) => {
+    livro.findById(id, (err, livros) => {
       if (err) {
         res
           .status(400)
@@ -22,7 +22,7 @@ class LivroController {
   };
 
   static cadastrarLivro = (req, res) => {
-    let livro = new livros(req.body);
+    let livro = new livro(req.body);
 
     livro.save((err) => {
       if (err) {
@@ -38,7 +38,7 @@ class LivroController {
   static atualizarLivro = (req, res) => {
     const id = req.params.id;
 
-    livros.findByIdAndUpdate(id, { $set: req.body }, (err) => {
+    livro.findByIdAndUpdate(id, { $set: req.body }, (err) => {
       if (!err) {
         res.status(200).send({ message: "Livro atualizado com sucesso" });
       } else {
@@ -50,7 +50,7 @@ class LivroController {
   static excluirLivro = (req, res) => {
     const id = req.params.id;
 
-    livros.findByIdAndDelete(id, (err) => {
+    livro.findByIdAndDelete(id, (err) => {
       if (!err) {
         res.status(200).send({ message: "Livro remvido com sucesso" });
       } else {
@@ -60,4 +60,4 @@ class LivroController {
   };
 }
 
-export default LivroController;
+export default LivrosController;
